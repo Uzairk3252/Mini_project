@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Metrics Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('images/health.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Metrics Predictor</h1>
+        <form method="post">
+            <label for="current_sugar">Current Sugar Level:</label>
+            <input type="number" name="current_sugar" step="any" required><br>
+
+            <label for="Csystolic_bp">Current Systolic BP:</label>
+            <input type="number" name="Csystolic_bp" step="any" required><br>
+
+            <label for="Cdiastolic_bp">Current Diastolic BP:</label>
+            <input type="number" name="Cdiastolic_bp" step="any" required><br>
+
+            <label for="previous_sugar">Previous Sugar Level:</label>
+            <input type="number" name="previous_sugar" step="any" required><br>
+
+            <label for="Psystolic_bp">Previous Systolic BP:</label>
+            <input type="number" name="Psystolic_bp" step="any" required><br>
+
+            <label for="Pdiastolic_bp">Previous Diastolic BP:</label>
+            <input type="number" name="Pdiastolic_bp" step="any" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

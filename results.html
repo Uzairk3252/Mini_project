@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: inline-block;
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            margin: 0 0 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <h2>Entered Values:</h2>
+        <ul>
+            <li>Current Sugar Level: {{ user_features[0] }}</li>
+            <li>Current Systolic BP: {{ user_features[1] }}</li>
+            <li>Current Diastolic BP: {{ user_features[2] }}</li>
+            <li>Previous Sugar Level: {{ user_features[3] }}</li>
+            <li>Previous Systolic BP: {{ user_features[4] }}</li>
+            <li>Previous Diastolic BP: {{ user_features[5] }}</li>
+        </ul>
+
+        <h2>Predictions:</h2>
+        <ul>
+            <li>Systolic BP: {{ results.systolic_bp }}</li>
+            <li>Diastolic BP: {{ results.diastolic_bp }}</li>
+            <li>Sugar Level: {{ results.sugar_level }}</li>
+        </ul>
+        
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
